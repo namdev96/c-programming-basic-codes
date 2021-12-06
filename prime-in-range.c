@@ -1,26 +1,26 @@
 #include<stdio.h>
 
 int main(){
-int num1,num2,flag,i;
+int low,high,flag,i;
 printf("Enter any two positive number");
-scanf("%d%d",&num1,&num2);
-while(num1<num2){
+scanf("%d%d",&low,&high);
+while(low<high){
     flag=0;
-         if (num1 <= 1) {
-         ++num1;
+         if (low <= 1) {
+         ++low;
          continue;
       }
 
-    for( i = 2;i<=num1/2;++i){
-        if(num1%i==0){
+    for( i = 2;i<=low/2;++i){
+        if(low%i==0){
             flag=1;
             break;
         }
     }
     if(flag==0){
-        printf("%d\n",num1);
+        printf("%d\n",low);
     }
-    ++num1;
+    ++low;
 }
 }
 
